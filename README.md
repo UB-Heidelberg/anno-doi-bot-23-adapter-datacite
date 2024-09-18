@@ -46,6 +46,23 @@ Configuration
     which may or may not be case-sensitive.
     For reliable ordering, start all filenames with a fixed number of
     digits, e.g. `010_basics.rc`, `023_doi_format.rc`, `080_hotfixes.rc`.
+* Once the DataCite adapter itself is configured, you need to configure
+  your DOI bot to actually use the DataCite adapter.
+  To do so, add these settings to your DOI bot config:
+
+  ```bash
+  CFG[doibot_adapter_name]='datacite'
+  CFG[doibot_adapter_prog]=
+  CFG[doibot_adapter_args]=
+  ```
+
+  * An empty value for `doibot_adapter_prog` means to search in the default
+    paths, assuming the adapter is installed as a peer dependency.
+    If you installed it somewhere else, or the automatic path detection fails,
+    put the absolute path to `adapter.sh`.
+
+
+
 
 
 
