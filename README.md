@@ -52,8 +52,8 @@ Configuration
 
   ```bash
   CFG[doibot_adapter_name]='datacite'
-  CFG[doibot_adapter_prog]=
-  CFG[doibot_adapter_args]=
+  CFG[doibot_adapter_prog]= # <- Clear potential example values that may
+  CFG[doibot_adapter_args]= # <- have been set by the default config.
   ```
 
   * An empty value for `doibot_adapter_prog` means to search in the default
