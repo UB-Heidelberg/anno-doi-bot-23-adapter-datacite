@@ -1,5 +1,5 @@
 { "name": "anno-doi-bot-23-adapter-datacite",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "DataCite adapter for anno-doi-bot-23.",
   "keywords": [
     "annotation",
@@ -26,7 +26,7 @@
   "scripts": {
     "adapter": "./adapter.sh",
     "sh": "\"$@\"",
-    "test": "elp && nodemjs test/all.mjs"
+    "test": "elp && nodejs test/all.mjs"
   },
   "directories": { "test": "test" },
   "eslintConfig": { "extends": "nodejs-pmb" },
@@ -50,10 +50,9 @@
     "eslint-config-nodejs-pmb": "^0.3.5",
     "eslint-plugin-json-light-pmb": "^1.0.7",
     "eslint-plugin-n": "^15.2.4",
-    "eslint-pretty-pmb": "^1.0.5",
-    "nodemjs": "^0.1.15"
+    "eslint-pretty-pmb": "^1.0.5"
   },
 
 
-  "engines": { "npm": ">=7.0.0", "node": ">=16.0.0" }
+  "engines": { "npm": ">=7.0.0", "node": ">=24.0.0" }
 }

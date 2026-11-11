@@ -24,7 +24,10 @@ function oneLineJson(x) {
 
 const EX = {
 
-  async nodemjsCliMain() {
+  async nodemjsCliMain() { throw new Error('Using nodemjs is deprecated!'); },
+
+
+  async cliMain() {
     const apiReply = await readOneStdinRecord();
     const topKeys = topKeysComma(apiReply);
     if (topKeys === 'errors') { return EX.gotErrorsReply(apiReply.errors); }
@@ -90,4 +93,5 @@ const EX = {
 };
 
 
+EX.autostartTimer = setTimeout(() => EX.cliMain(), 1);
 export default EX;

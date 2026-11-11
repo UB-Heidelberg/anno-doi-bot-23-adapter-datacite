@@ -29,7 +29,10 @@ function orUnav(x) { return x || ':unav'; } /*
 
 const EX = {
 
-  async nodemjsCliMain() {
+  async nodemjsCliMain() { throw new Error('Using nodemjs is deprecated!'); },
+
+
+  async cliMain() {
     const anno = await readOneStdinRecord();
     const mustEnv = mustBe.tProp('env var ', process.env);
     const cfg = {
@@ -140,4 +143,5 @@ const EX = {
 };
 
 
+EX.autostartTimer = setTimeout(() => EX.cliMain(), 1);
 export default EX;
